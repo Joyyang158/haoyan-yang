@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://joyyang158.github.io/haoyan-yang/sitemap.xml
