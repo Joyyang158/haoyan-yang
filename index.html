@@ -181,8 +181,9 @@
     background:none;border:1px solid var(--line);color:var(--ink-soft);padding:9px 16px;border-radius:2px;cursor:pointer;transition:all .2s}
   .pub-filter button.active{background:var(--ink);color:var(--paper);border-color:var(--ink)}
   .pub-filter button:hover{border-color:var(--accent)}
+  .pub-group-title{font-family:"JetBrains Mono",monospace;font-size:.72rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);margin:38px 0 10px}
+  .pub-group:first-child .pub-group-title{margin-top:0}
   .pub{display:grid;grid-template-columns:178px 1fr;gap:30px;padding:22px 0;border-top:1px solid var(--line);transition:opacity .3s}
-  .pub:last-of-type{border-bottom:1px solid var(--line)}
   .pub-venue{font-family:"JetBrains Mono",monospace;line-height:1.3}
   .pub-venue .venue{display:block;font-family:"Fraunces",serif;font-size:1.2rem;font-weight:600;color:var(--ink);letter-spacing:-.01em;line-height:1.22}
   .pub-venue .venue-sub{display:block;margin-top:6px;font-size:.82rem;letter-spacing:.02em;color:var(--ink-soft);line-height:1.4}
@@ -201,7 +202,6 @@
 
   /* experience */
   .exp{display:grid;grid-template-columns:198px 1fr;gap:28px;padding:22px 0;border-top:1px solid var(--line);align-items:start}
-  .exp:last-child{border-bottom:1px solid var(--line)}
   .exp-when{font-family:"JetBrains Mono",monospace;font-size:1.05rem;letter-spacing:.02em;color:var(--ink);padding-top:8px}
   .exp-org{font-family:"Fraunces",serif;font-size:1.45rem;font-weight:500;display:flex;flex-wrap:wrap;align-items:baseline;gap:12px}
   .exp-org a{color:var(--ink);text-decoration:none;border-bottom:2px solid var(--line);transition:color .25s,border-color .25s}
@@ -416,17 +416,10 @@
     </div>
 
     <div id="pub-list">
+      <div class="pub-group">
+      <h3 class="pub-group-title reveal">Peer-Reviewed</h3>
       <article class="pub reveal" data-cat="self">
-        <div class="pub-venue"><span class="venue">Preprint, 2026</span></div>
-        <div>
-          <h3 class="pub-title"><a href="https://arxiv.org/abs/2606.00251" target="_blank" rel="noopener">Capability Self-Assessment: Teaching LLMs to Know Their Limits <span class="arr">&#8599;</span></a></h3>
-          <p class="pub-authors"><span class="me">Haoyan Yang*</span>, R. Shirkavand*, Y. Jin, J. Zhou, S. Gao, H. Huang</p>
-          <span class="pub-cat">Self-X</span>
-        </div>
-      </article>
-
-      <article class="pub reveal" data-cat="self">
-        <div class="pub-venue"><span class="venue">TMLR, 2026</span><a class="venue-sub" href="https://jmlr.org/tmlr/papers/" target="_blank" rel="noopener">Survey Certification</a></div>
+        <div class="pub-venue"><span class="venue">TMLR</span><a class="venue-sub" href="https://jmlr.org/tmlr/papers/" target="_blank" rel="noopener">Survey Certification</a></div>
         <div>
           <h3 class="pub-title"><a href="https://arxiv.org/abs/2603.25681" target="_blank" rel="noopener">Self-Improvement of Large Language Models: A Technical Overview and Future Outlook <span class="arr">&#8599;</span></a></h3>
           <p class="pub-authors"><span class="me">Haoyan Yang</span>, M. Xerri, S. Park, H. Zhang, Y. Feng, S. A. Kogilathota, J. Zhou</p>
@@ -461,6 +454,27 @@
         </div>
       </article>
 
+      <article class="pub reveal" data-cat="rag">
+        <div class="pub-venue"><span class="venue">EMNLP 2023</span></div>
+        <div>
+          <h3 class="pub-title"><a href="https://arxiv.org/abs/2310.18347" target="_blank" rel="noopener">PRCA: Fitting Black-Box LLMs for Retrieval QA via a Pluggable Reward-Driven Contextual Adapter <span class="arr">&#8599;</span></a></h3>
+          <p class="pub-authors"><span class="me">Haoyan Yang</span>, Z. Li, Y. Zhang, J. Wang, N. Cheng, M. Li, J. Xiao</p>
+          <span class="pub-cat">RAG</span>
+        </div>
+      </article>
+      </div>
+
+      <div class="pub-group">
+      <h3 class="pub-group-title reveal">Preprints</h3>
+      <article class="pub reveal" data-cat="self">
+        <div class="pub-venue"><span class="venue">Preprint, 2026</span></div>
+        <div>
+          <h3 class="pub-title"><a href="https://arxiv.org/abs/2606.00251" target="_blank" rel="noopener">Capability Self-Assessment: Teaching LLMs to Know Their Limits <span class="arr">&#8599;</span></a></h3>
+          <p class="pub-authors"><span class="me">Haoyan Yang*</span>, R. Shirkavand*, Y. Jin, J. Zhou, S. Gao, H. Huang</p>
+          <span class="pub-cat">Self-X</span>
+        </div>
+      </article>
+
       <article class="pub reveal" data-cat="trust">
         <div class="pub-venue"><span class="venue">Preprint, 2024</span></div>
         <div>
@@ -487,15 +501,7 @@
           <span class="pub-cat">Trustworthy</span>
         </div>
       </article>
-
-      <article class="pub reveal" data-cat="rag">
-        <div class="pub-venue"><span class="venue">EMNLP 2023</span></div>
-        <div>
-          <h3 class="pub-title"><a href="https://arxiv.org/abs/2310.18347" target="_blank" rel="noopener">PRCA: Fitting Black-Box LLMs for Retrieval QA via a Pluggable Reward-Driven Contextual Adapter <span class="arr">&#8599;</span></a></h3>
-          <p class="pub-authors"><span class="me">Haoyan Yang</span>, Z. Li, Y. Zhang, J. Wang, N. Cheng, M. Li, J. Xiao</p>
-          <span class="pub-cat">RAG</span>
-        </div>
-      </article>
+      </div>
     </div>
   </div>
 </section>
@@ -634,6 +640,10 @@
     b.classList.add('active');
     const f=b.dataset.filter;
     pubs.forEach(p=>{p.style.display=(f==='all'||p.dataset.cat===f)?'grid':'none';});
+    document.querySelectorAll('#pub-list .pub-group').forEach(g=>{
+      const any=[...g.querySelectorAll('.pub')].some(p=>p.style.display!=='none');
+      g.style.display=any?'':'none';
+    });
   }));
 </script>
 </body>
